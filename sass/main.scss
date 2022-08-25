@@ -1,7 +1,7 @@
 // Component
-@import './component/common';
-@import './component/container';
-@import './component/section';
+@import './components/common';
+@import './components/container';
+@import './components/section';
 
 // Elements
 @import './elements/logo';
@@ -22,5 +22,5 @@
 @import './portfolio/examples';
 @import './portfolio/filter';
 
-@import './visual/hidden';
-@import './visual/root';
+@import './utils/hidden';
+@import './utils/variables';
