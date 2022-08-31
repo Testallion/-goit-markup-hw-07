@@ -1,14 +1,14 @@
-.client__list {
+.clients {
     display: flex;
     gap: var(--list-gap);
 }
 
-.client__item {
+.clients__item {
     width: 170px;
     height: 92px;
 }
 
-.client__link {
+.clients__link {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,17 +18,15 @@
     border: 1px solid var(--social-color);
     border-radius: 4px;
     transition: color var(--transition-duration) var(--transition-timing-function),
-        background-color var(--transition-duration) var(--transition-timing-function);
+    background-color var(--transition-duration) var(--transition-timing-function);
+    
+    &:hover, &:focus {
+        color: var(--primary-color);
+        border-color: var(--primary-color);
+    }
 }
 
-
-.client__link:hover,
-.client__link:focus {
-    color: var(--primary-color);
-    border-color: var(--primary-color);
-}
-
-.client__icon {
+.clients__icon {
     display: block;
     fill: currentColor;
     width: 106px;

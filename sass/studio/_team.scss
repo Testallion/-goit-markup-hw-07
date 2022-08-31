@@ -1,9 +1,9 @@
-.team-section {
+.section--team-bgrnd {
     background-color: var(--second-background-color2);
 
 }
 
-.team-list {
+.team {
     /* Box model */
     display: flex;
     gap: var(--list-gap);
@@ -35,7 +35,7 @@
     text-align: center;
 }
 
-.team__position {
+.team__description {
     /* Box model */
     margin-top: 0px;
     margin-bottom: 0px;

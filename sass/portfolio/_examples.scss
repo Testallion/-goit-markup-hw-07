@@ -8,12 +8,13 @@
 .examples__link {
     display: block;
     transition: box-shadow var(--transition-duration) var(--transition-timing-function);
+
+    &:hover, &:focus {
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+        
+    }
 }
 
-.examples__link:hover,
-.examples__link:focus {
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-}
 
 
 .examples-footer {
@@ -53,12 +54,14 @@
     background-color: rgba(33, 150, 243, 0.9);
     transform: translatey(100%);
     transition: transform var(--transition-duration) var(--transition-timing-function);
+
+    .examples__link:hover &,
+    .examples__link:focus & {
+        transform: translatey(0);
+    }
+
 }
 
-.examples__link:hover .examples-overlay,
-.examples__link:focus .examples-overlay {
-    transform: translatey(0);
-}
 
 .examples-overlay-text {
     margin: 0;

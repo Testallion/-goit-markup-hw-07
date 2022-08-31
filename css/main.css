@@ -161,12 +161,12 @@ a {
   padding-bottom: 32px;
 }
 
-.site-nav__link.current {
+.site-nav__link--current {
   position: relative;
   color: var(--primary-color);
 }
 
-.site-nav__link.current::after {
+.site-nav__link--current::after {
   content: "";
   position: absolute;
   bottom: -1px;
@@ -311,19 +311,19 @@ a {
           justify-content: center;
 }
 
-.team-social__item {
+.social__item {
   width: 44px;
   height: 44px;
 }
 
-.team-social__icon {
+.social__icon {
   width: 20px;
   height: 20px;
   display: block;
   fill: currentColor;
 }
 
-.team-social__link {
+.social__link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -340,9 +340,7 @@ a {
   -webkit-transition: color var(--transition-duration) var(--transition-timing-function), background-color var(--transition-duration) var(--transition-timing-function);
   transition: color var(--transition-duration) var(--transition-timing-function), background-color var(--transition-duration) var(--transition-timing-function);
 }
-
-.team-social__link:hover,
-.team-social__link:focus {
+.social__link:hover, .social__link:focus {
   background-color: var(--primary-background-color);
   color: var(--second-color);
 }
@@ -393,7 +391,7 @@ button {
   display: flex;
 }
 
-.activity-section {
+.section--no-top-padding {
   /* Box model */
   padding-top: 0px;
 }
@@ -435,19 +433,19 @@ button {
   color: var(--second-color);
 }
 
-.client__list {
+.clients {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: var(--list-gap);
 }
 
-.client__item {
+.clients__item {
   width: 170px;
   height: 92px;
 }
 
-.client__link {
+.clients__link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -465,14 +463,12 @@ button {
   -webkit-transition: color var(--transition-duration) var(--transition-timing-function), background-color var(--transition-duration) var(--transition-timing-function);
   transition: color var(--transition-duration) var(--transition-timing-function), background-color var(--transition-duration) var(--transition-timing-function);
 }
-
-.client__link:hover,
-.client__link:focus {
+.clients__link:hover, .clients__link:focus {
   color: var(--primary-color);
   border-color: var(--primary-color);
 }
 
-.client__icon {
+.clients__icon {
   display: block;
   fill: currentColor;
   width: 106px;
@@ -906,11 +902,11 @@ button {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.team-section {
+.section--team-bgrnd {
   background-color: var(--second-background-color2);
 }
 
-.team-list {
+.team {
   /* Box model */
   display: -webkit-box;
   display: -ms-flexbox;
@@ -945,7 +941,7 @@ button {
   text-align: center;
 }
 
-.team__position {
+.team__description {
   /* Box model */
   margin-top: 0px;
   margin-bottom: 0px;
@@ -972,9 +968,7 @@ button {
   transition: box-shadow var(--transition-duration) var(--transition-timing-function);
   transition: box-shadow var(--transition-duration) var(--transition-timing-function), -webkit-box-shadow var(--transition-duration) var(--transition-timing-function);
 }
-
-.examples__link:hover,
-.examples__link:focus {
+.examples__link:hover, .examples__link:focus {
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
@@ -1020,9 +1014,7 @@ button {
   transition: transform var(--transition-duration) var(--transition-timing-function);
   transition: transform var(--transition-duration) var(--transition-timing-function), -webkit-transform var(--transition-duration) var(--transition-timing-function);
 }
-
-.examples__link:hover .examples-overlay,
-.examples__link:focus .examples-overlay {
+.examples__link:hover .examples-overlay, .examples__link:focus .examples-overlay {
   -webkit-transform: translatey(0);
           transform: translatey(0);
 }
@@ -1051,25 +1043,15 @@ button {
   margin-bottom: 50px;
 }
 
-.filter__item:not(:last-child) {
-  /* Box model */
-  margin-right: 8px;
-}
-
 .filter__item {
   /* Box model */
   margin-top: 0px;
 }
-
-.filter__btn.current {
-  background-color: var(--primary-background-color);
-  color: var(--second-color);
-  -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-          box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+.filter__item:not(:last-child) {
+  margin-right: 8px;
 }
 
-.filter__btn:hover,
-.filter__btn:focus {
+.filter__btn.current {
   background-color: var(--primary-background-color);
   color: var(--second-color);
   -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -1093,6 +1075,12 @@ button {
   transition: color var(--transition-duration) var(--transition-timing-function), background-color var(--transition-duration) var(--transition-timing-function), -webkit-box-shadow var(--transition-duration) var(--transition-timing-function);
   transition: color var(--transition-duration) var(--transition-timing-function), background-color var(--transition-duration) var(--transition-timing-function), box-shadow var(--transition-duration) var(--transition-timing-function);
   transition: color var(--transition-duration) var(--transition-timing-function), background-color var(--transition-duration) var(--transition-timing-function), box-shadow var(--transition-duration) var(--transition-timing-function), -webkit-box-shadow var(--transition-duration) var(--transition-timing-function);
+}
+.filter__btn:hover, .filter__btn:focus {
+  background-color: var(--primary-background-color);
+  color: var(--second-color);
+  -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .visually-hidden {
